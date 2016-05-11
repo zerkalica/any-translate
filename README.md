@@ -30,7 +30,7 @@ import type {
     TokenSubject,
     Translator,
     TokenizedTranslate
-} from 'any-translate/i/interfaces'
+} from 'any-translate'
 
 import {
     createTranslate,
