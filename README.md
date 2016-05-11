@@ -35,15 +35,15 @@ import {
     createHasTranslation
 } from 'any-translate'
 
-import createBabelfishTranslator from 'any-translate-adapter-babelfish'
+import {createBabelfishTranslator} from 'any-translate-adapter-babelfish'
 
 function onNotPresentTranslation(locale: string, message: string): void {
     console.log('Not present: ', locale, message)
 }
 
 const translator: Translator = createBabelfishTranslator(
-    locale: 'ru_RU',
-    phrases: {
+    'ru_RU',
+    {
         'module1': {
             'hello': 'Привет, #{name}',
             'helloWithLink': 'Привет, #{name}, ссылка: #{link}.'
