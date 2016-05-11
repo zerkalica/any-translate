@@ -5,7 +5,7 @@ import type {
     TokenizerParams,
     TranslateArgs,
     Translate
-} from 'any-translate/i/interfaces'
+} from 'any-translate'
 
 const TOKEN = '@_T_@'
 const NAMETOKEN = '@_N_@'
@@ -17,7 +17,6 @@ function mapTokens(
 ): Array<TokenSubject>|string {
     const elements: {[id: string]: Function|Object} = {};
     const tokens: TranslateArgs = {};
-
     const keys: Array<string> = Object.keys(params);
     for (let i = 0, l = keys.length; i < l; i++) {
         const name: string = keys[i];
