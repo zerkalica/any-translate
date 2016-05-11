@@ -8,7 +8,7 @@ Useful, when translation parameters is not only strings. For example, with react
 function Widget(t: TokenizedTranslate, message: string): Element {
     return (
         <div>
-            {t('Hello', {
+            {t('Hello #{message}, #{link}', {
                 message,
                 link: <a href="/user">{t('user')}</a>
             })}
@@ -17,7 +17,9 @@ function Widget(t: TokenizedTranslate, message: string): Element {
 }
 ```
 
-Only [babelfish](https://github.com/nodeca/babelfish) supported on current moment via [any-translate-adapter-babelfish](https://github.com/zerkalica/any-translate-adapter-babelfish).
+Where t returns array of strings and functions.
+
+Only [babelfish](https://github.com/nodeca/babelfish) supported at current moment via [any-translate-adapter-babelfish](https://github.com/zerkalica/any-translate-adapter-babelfish).
 
 ## Example
 
@@ -70,5 +72,4 @@ const translated2: Array<TokenSubject>|string = t('module1.helloWithLink', {
     link: LinkWidget
 });
 // ['Привет, Вася, ссылка: ', LinkWidget, '.']
-
 ```
