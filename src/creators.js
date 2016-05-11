@@ -3,7 +3,7 @@
 import type {
     Translator,
     TokenizedTranslate,
-    TranslateArgs,
+    TranslateArgs
 } from 'any-translate/i/interfaces'
 
 import createMapTokens from 'any-translate/createMapTokens'

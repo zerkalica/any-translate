@@ -43,7 +43,7 @@
     ".flowconfig",
     "README.md",
     "LICENSE",
-    "lib",
+    "flow-typed",
     "dist",
     "i"
   ],

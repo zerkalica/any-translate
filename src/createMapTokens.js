@@ -58,7 +58,10 @@ function mapTokens(
 export default function createMapTokens(
     t: Translate
 ): TokenizedTranslate {
-    return function _mapTokens(message: string, params: TokenizerParams): Array<TokenSubject>|string {
+    return function _mapTokens(
+        message: string,
+        params: TokenizerParams
+    ): Array<TokenSubject>|string {
         return mapTokens(t, message, params)
     }
 }
