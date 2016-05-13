@@ -13,10 +13,15 @@ const NAMETOKEN = '@_N_@'
 function mapTokens(
     t: Translate,
     message: string,
-    params: TokenizerParams
+    params?: TokenizerParams
 ): Array<TokenSubject>|string {
     const elements: {[id: string]: Function|Object} = {};
     const tokens: TranslateArgs = {};
+
+    if (!params) {
+        return t(message, tokens)
+    }
+
     const keys: Array<string> = Object.keys(params);
     for (let i = 0, l = keys.length; i < l; i++) {
         const name: string = keys[i];

@@ -11,7 +11,7 @@ declare module 'any-translate' {
 
     declare type TokenizedTranslate = (
         message: string,
-        params: TokenizerParams
+        params?: TokenizerParams
     ) => Array<TokenSubject>|string;
 
     declare type NeedTranslate = (locale: string, message: string) => void;
