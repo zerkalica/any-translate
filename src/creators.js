@@ -2,14 +2,14 @@
 
 import type {
     Translator,
-    TokenizedTranslate,
+    Tr,
     TranslateArgs,
     HasTranslation
 } from 'any-translate'
 
 import createMapTokens from 'any-translate/createMapTokens'
 
-export function createTranslate(bf: Translator): TokenizedTranslate {
+export function createTranslate(bf: Translator): Tr {
     function translate(message: string, params: TranslateArgs): string {
         return bf.translate(message, params)
     }

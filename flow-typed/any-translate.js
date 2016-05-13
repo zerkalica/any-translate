@@ -9,7 +9,7 @@ declare module 'any-translate' {
         params: TranslateArgs
     ) => string;
 
-    declare type TokenizedTranslate = (
+    declare type Tr = (
         message: string,
         params?: TokenizerParams
     ) => Array<TokenSubject>|string;
@@ -30,7 +30,7 @@ declare module 'any-translate' {
 
     declare type HasTranslation = (message: string) => boolean;
 
-    declare function createMapTokens(t: Translate): TokenizedTranslate;
-    declare function createTranslate(bf: Translator): TokenizedTranslate;
+    declare function createMapTokens(t: Translate): Tr;
+    declare function createTranslate(bf: Translator): Tr;
     declare function createHasTranslation(bf: Translator): HasTranslation
 }

@@ -1,6 +1,6 @@
 /* @flow */
 import type {
-    TokenizedTranslate,
+    Tr,
     TokenSubject,
     TokenizerParams,
     TranslateArgs,
@@ -61,10 +61,10 @@ function mapTokens(
 
 export default function createMapTokens(
     t: Translate
-): TokenizedTranslate {
+): Tr {
     return function _mapTokens(
         message: string,
-        params: TokenizerParams
+        params?: TokenizerParams
     ): Array<TokenSubject>|string {
         return mapTokens(t, message, params)
     }
